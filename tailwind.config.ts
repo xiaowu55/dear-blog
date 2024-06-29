@@ -6,6 +6,15 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  breakpoints: {
+    "3xl": "1920px",
+    "2xl": "1536px",
+    xl: "1280px",
+    lg: "1024px",
+    md: "768px",
+    sm: "640px",
+    xs: "450px",
+  },
   theme: {
     extend: {
       backgroundImage: {

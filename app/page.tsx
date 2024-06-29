@@ -1,16 +1,27 @@
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="font-sans font-[700]">
+    <main className="flex justify-center pt-8 w-full">
+      <div className="w-full font-sans font-[500] text-[9px] flex items-center mx-[20px] max-w-[1140px]" >
         <span>
-          BECOME A MEMBER
+          <Link href=''>
+            BECOME A MEMBER
+          </Link>
         </span>
-        <span>
-          LOG IN
-        </span>
-        <span>SUBMIT</span>
-      </div>
-    </main>
+        <div className="flex gap-3 ml-auto">
+          <span className="border-b border-b-black ease-linear duration-200 hover:border-opacity-0">
+            <Link href=''>
+              LOG IN
+            </Link>
+          </span>
+          <span className="border-b border-b-black ease-linear duration-200 hover:border-opacity-0">
+            <Link href=''>
+              SUBMIT
+            </Link>
+          </span>
+        </div>
+      </div >
+    </main >
   );
 }
