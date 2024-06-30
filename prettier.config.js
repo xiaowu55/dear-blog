@@ -1,4 +1,9 @@
 /* eslint-disable no-undef */
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import("prettier").Config}
+ */
+
 module.exports = {
   endOfLine: "lf",
   semi: true,
@@ -16,6 +21,7 @@ module.exports = {
     "^@/config/(.*)$",
     "^@/lib/(.*)$",
     "",
+    "^@/app/(.*)$",
     "^@/hooks/(.*)$",
     "^@/components/ui/(.*)$",
     "^@/components/(.*)$",
@@ -26,7 +32,9 @@ module.exports = {
     "",
     "^@/assets/(.*)$",
   ],
+  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss",],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   importOrderTypeScriptVersion: "5.0.0",
-  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "importOrder": ["<BUILT_IN_MODULES>", "", "<THIRD_PARTY_MODULES>", "", "^[.]"],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^(?!.*[.]css$)[./].*$", ".css$"]
 };
