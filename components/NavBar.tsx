@@ -2,13 +2,14 @@
 
 import { CommunityNavItem, ItemList } from "@/lib/NavList";
 import { cn } from "@/lib/utils";
+import { t } from "i18next";
 import { Menu, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 
 export const CategoriesNavItem: ItemList = [
-  { Name: "TAG", Link: "", borderColor: "border-b-nav-origin" },
+  { Name: "test", Link: "", borderColor: "border-b-nav-origin" },
   { Name: "FILM", Link: "", borderColor: "border-b-nav-blue" },
   { Name: "PHOTO", Link: "", borderColor: "border-b-nav-yellow" },
   { Name: "MUSIC", Link: "", borderColor: "border-b-nav-purple" },
@@ -25,7 +26,7 @@ export function renderNavItem(itemList: ItemList) {
           !!item.borderColor ? `${item.borderColor}` : "border-b-buttonText"
         )}
       >
-        {item.Name}
+        {t(`${item.Name}`)}
       </span>
     </Link>
   ));

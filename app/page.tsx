@@ -2,6 +2,7 @@
 
 import { CategoriesNavItem, NavBar, renderNavItem } from "@/components/NavBar";
 import Link from "next/link";
+import "../i18n";
 
 export default function Home() {
   return (
