@@ -13,3 +13,6 @@ trim_trailing_whitespace = true
 
 [*.ts]
 quote_type = double
+
+[*.tsx]
+quote_type = double
