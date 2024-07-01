@@ -1,27 +1,30 @@
+"use client";
+
+import { CategoriesNavItem, NavBar, renderNavItem } from "@/components/NavBar";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex justify-center pt-8 w-full">
-      <div className="w-full font-sans font-[500] text-[9px] flex items-center mx-[20px] max-w-[1140px]" >
+    <main className="flex w-full max-w-full flex-col items-center px-5 pt-8">
+      <div className="text-headline flex w-full max-w-[1140px] font-sans text-[9px] font-[500]">
         <span>
-          <Link href=''>
-            BECOME A MEMBER
-          </Link>
+          <Link href="">BECOME A MEMBER</Link>
         </span>
-        <div className="flex gap-3 ml-auto">
-          <span className="border-b border-b-black ease-linear duration-200 hover:border-opacity-0">
-            <Link href=''>
-              LOG IN
-            </Link>
+        <div className="ml-auto flex gap-3">
+          <span className="border-b-headline border-b duration-200 ease-linear hover:border-opacity-0">
+            <Link href="">LOG IN</Link>
           </span>
-          <span className="border-b border-b-black ease-linear duration-200 hover:border-opacity-0">
-            <Link href=''>
-              SUBMIT
-            </Link>
+          <span className="border-b-headline border-b duration-200 ease-linear hover:border-opacity-0">
+            <Link href="">SUBMIT</Link>
           </span>
         </div>
-      </div >
-    </main >
+      </div>
+      <div className="mx-5 flex w-full max-w-[1140px]">
+        <NavBar></NavBar>
+        <div className="grid-row-3 col-auto ml-10 mt-9 grid max-h-[112px] grid-cols-2 gap-x-5">
+          {renderNavItem(CategoriesNavItem)}
+        </div>
+      </div>
+    </main>
   );
 }
