@@ -71,7 +71,7 @@ export const NavBar = () => {
         ) : (
           <>
             <span className="font-sans text-[112px] leading-[112px]">
-              <Link href="">VIKTOOOOR</Link>
+              <Link href="/profile">VIKTOOOOR</Link>
             </span>
             <Search
               className="ml-[50px] h-[30px] w-[30px] cursor-pointer"

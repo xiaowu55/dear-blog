@@ -4,7 +4,7 @@ import { CategoriesNavItem, NavBar, renderNavItem } from "@/components/NavBar";
 import Link from "next/link";
 import "../i18n";
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <main className="flex w-full max-w-full flex-col items-center px-5 pt-8">
       <div className="text-headline flex w-full max-w-[1140px] font-sans text-[9px] font-[500]">
