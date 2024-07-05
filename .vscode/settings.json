@@ -1,8 +1,6 @@
 {
-    "cSpell.words": [
-        "clsx",
-        "Fira",
-        "Playfair",
-        "VIKTOOOOR"
-    ]
+  "cSpell.words": ["clsx", "Fira", "Playfair", "VIKTOOOOR"],
+  "i18n-ally.localesPaths": ["public/locales"],
+  "i18n-ally.sourceLanguage": "zh-CN",
+  "i18n-ally.keystyle": "nested"
 }

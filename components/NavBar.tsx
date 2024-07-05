@@ -9,12 +9,12 @@ import { useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 
 export const CategoriesNavItem: ItemList = [
-  { Name: "test", Link: "", borderColor: "border-b-nav-origin" },
-  { Name: "FILM", Link: "", borderColor: "border-b-nav-blue" },
-  { Name: "PHOTO", Link: "", borderColor: "border-b-nav-yellow" },
-  { Name: "MUSIC", Link: "", borderColor: "border-b-nav-purple" },
-  { Name: "DESIGN", Link: "", borderColor: "border-b-nav-green" },
-  { Name: "TAG", Link: "", borderColor: "border-b-nav-grey" },
+  { Name: "Technic", Link: "", borderColor: "border-b-nav-origin" },
+  { Name: "Blog", Link: "", borderColor: "border-b-nav-blue" },
+  { Name: "Film", Link: "", borderColor: "border-b-nav-yellow" },
+  { Name: "Photo", Link: "", borderColor: "border-b-nav-purple" },
+  { Name: "Read", Link: "", borderColor: "border-b-nav-green" },
+  { Name: "Other", Link: "", borderColor: "border-b-nav-grey" },
 ];
 
 export function renderNavItem(itemList: ItemList) {
@@ -26,7 +26,7 @@ export function renderNavItem(itemList: ItemList) {
           !!item.borderColor ? `${item.borderColor}` : "border-b-buttonText"
         )}
       >
-        {t(`${item.Name}`)}
+        {t(`Nav.${item.Name}`)}
       </span>
     </Link>
   ));
@@ -46,7 +46,7 @@ export const NavBar = () => {
     <div className="relative">
       <div
         className={cn(
-          "border-headline mt-[36px] flex max-w-[877px] items-center border-[2.5px] px-10",
+          "mt-[36px] flex max-w-[877px] items-center border-[2.5px] border-headline px-10",
           showMenu && "border-b-0"
         )}
       >
@@ -101,7 +101,7 @@ export const NavBar = () => {
         )}
       </div>
       {showMenu ? (
-        <div className="border-headline relative -top-2 max-w-[877px] border-[2.5px] border-t-0 pb-9">
+        <div className="relative -top-2 max-w-[877px] border-[2.5px] border-t-0 border-headline pb-9">
           <div className="grid min-h-4 grid-cols-2 px-10 pt-14 font-serif">
             <div className="flex flex-col gap-5">
               <span>CATEGORIES</span>

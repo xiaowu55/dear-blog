@@ -1,3 +1,11 @@
 {
-  "test":"test"
+  "Nav": {
+    "Technic": "Technic",
+    "Blog": "Blog",
+    "Film": "Film",
+    "Photo": "Photo",
+    "Read": "Read",
+    "Other": "Other"
+  },
+  "SwitchLanguage": "Switch Language"
 }

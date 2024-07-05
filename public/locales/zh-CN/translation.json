@@ -1,3 +1,11 @@
 {
-  "test":"测试"
+  "Nav": {
+    "Technic": "技术",
+    "Blog": "Blog",
+    "Film": "电影",
+    "Photo": "摄影",
+    "Read": "读书",
+    "Other": "其他"
+  },
+  "SwitchLanguage": "切换语言"
 }
