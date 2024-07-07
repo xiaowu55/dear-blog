@@ -1,5 +1,3 @@
-"use client";
-
 export default function Profile() {
   return (
     <div className="mt-[96px] flex w-full flex-col items-center justify-center">

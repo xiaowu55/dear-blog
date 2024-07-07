@@ -1,9 +1,8 @@
 "use client";
 
 import { CategoriesNavItem, NavBar, renderNavItem } from "@/components/NavBar";
-import Link from "next/link";
-import "../i18n";
 import { t } from "i18next";
+import Link from "next/link";
 
 export default function Dashboard() {
   return (

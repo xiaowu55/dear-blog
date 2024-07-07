@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Dashboard from "./dashboard";
+import Dashboard from "@/components/dashboard";
+import { languages } from "@/i18n/settings";
+import { dir } from "i18next";
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,11 +15,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  params: { lng },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { lng: string };
+}) {
   return (
-    <html lang="en">
+    <html lang={lng} dir={dir(lng)}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
