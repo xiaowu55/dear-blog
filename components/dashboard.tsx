@@ -1,6 +1,6 @@
 "use client";
 
-import { CategoriesNavItem, NavBar, renderNavItem } from "@/components/NavBar";
+import { CategoriesNavItem, NavBar, NavItem } from "@/components/NavBar";
 import { t } from "i18next";
 import Link from "next/link";
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
       <div className="mx-5 flex w-full max-w-[1140px]">
         <NavBar></NavBar>
         <div className="grid-row-3 col-auto ml-10 mt-9 grid max-h-[112px] grid-cols-2 gap-x-5">
-          {renderNavItem(CategoriesNavItem)}
+          {NavItem(CategoriesNavItem)}
         </div>
       </div>
     </main>

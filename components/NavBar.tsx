@@ -17,7 +17,7 @@ export const CategoriesNavItem: ItemList = [
   { Name: "Other", Link: "", borderColor: "border-b-nav-grey" },
 ];
 
-export function renderNavItem(itemList: ItemList) {
+export function NavItem(itemList: ItemList) {
   return itemList.map((item, index) => (
     <Link key={index} href={item.Link}>
       <span
@@ -105,11 +105,11 @@ export const NavBar = () => {
           <div className="grid min-h-4 grid-cols-2 px-10 pt-14 font-serif">
             <div className="flex flex-col gap-5">
               <span>CATEGORIES</span>
-              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{renderNavItem(CategoriesNavItem)}</div>
+              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{NavItem(CategoriesNavItem)}</div>
             </div>
             <div className="flex flex-col gap-5">
               <span>COMMUNITY</span>
-              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{renderNavItem(CommunityNavItem)}</div>
+              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{NavItem(CommunityNavItem)}</div>
             </div>
           </div>
         </div>
