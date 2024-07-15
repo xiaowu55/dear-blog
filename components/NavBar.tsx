@@ -1,11 +1,8 @@
-"use client";
-
 import { CommunityNavItem, ItemList } from "@/lib/NavList";
 import { cn } from "@/lib/utils";
-import { t } from "i18next";
 import { Menu, Search, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Input } from "./ui/input";
 
 export const CategoriesNavItem: ItemList = [
@@ -17,7 +14,7 @@ export const CategoriesNavItem: ItemList = [
   { Name: "Other", Link: "", borderColor: "border-b-nav-grey" },
 ];
 
-export function NavItem(itemList: ItemList) {
+export function NavItem({ itemList, t }: { itemList: ItemList; t: any }) {
   return itemList.map((item, index) => (
     <Link key={index} href={item.Link}>
       <span
@@ -32,7 +29,7 @@ export function NavItem(itemList: ItemList) {
   ));
 }
 
-export const NavBar = () => {
+export const NavBar: FC<{ t: any }> = ({ t }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [inputValue, setInputValue] = useState<string>("");
@@ -105,11 +102,15 @@ export const NavBar = () => {
           <div className="grid min-h-4 grid-cols-2 px-10 pt-14 font-serif">
             <div className="flex flex-col gap-5">
               <span>CATEGORIES</span>
-              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{NavItem(CategoriesNavItem)}</div>
+              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">
+                <NavItem itemList={CategoriesNavItem} t={t}></NavItem>
+              </div>
             </div>
             <div className="flex flex-col gap-5">
               <span>COMMUNITY</span>
-              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">{NavItem(CommunityNavItem)}</div>
+              <div className="grid-row-3 col-auto grid grid-cols-2 gap-y-[9px]">
+                <NavItem itemList={CommunityNavItem} t={t}></NavItem>
+              </div>
             </div>
           </div>
         </div>

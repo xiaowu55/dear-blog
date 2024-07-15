@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
 
       <body className="bg-BodyBackground">
-        <Dashboard></Dashboard>
+        <Dashboard lng={lng}></Dashboard>
         {children}
       </body>
     </html>
