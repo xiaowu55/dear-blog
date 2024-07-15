@@ -53,7 +53,7 @@ export const NavBar: FC<{ t: any }> = ({ t }) => {
               onChange={(e) => setInputValue(e.target.value)}
               ref={inputRef}
               className={cn(
-                "mt-0 block h-[112px] w-[676.76px] border-0 text-[112px] focus:ring-0",
+                "mt-0 block h-[112px] w-[676.76px] border-0 bg-BodyBackground text-[112px] focus:ring-0",
                 inputValue && inputValue.length > 7 ? "text-[23px]" : "text-[112px]"
               )}
             ></Input>
